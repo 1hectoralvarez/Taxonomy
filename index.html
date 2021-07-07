@@ -139,6 +139,7 @@ None
 	  background-color: #4CAF50; /* Green */
 	  color: white;	
 	}
+	
 	.button2 {
 	  background-color: #000000; 
 	  border: none;
@@ -157,73 +158,78 @@ None
 	.button2:hover {
 	  box-shadow: 0px 0px 5px #000000;
 }
-
-
+	
 </style>
 	
 	
-	
-	
-	
-	
-	
-<!--Describes the content of the pages within the app.-->
+
+
+<!--Default Page: Describes the content of the pages within the app.-->
 <body>
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Insect Identifier</h1>
+		<h1>Austin Insect Key</h1>
 	</div>
-		
-		<!--This represents the home page and contains a description of the app and its purpose.-->
-		<div id="content" class="w3-container">
-			
+	
+	<div id="content" class="w3-container">
 			<a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 			
 			
 			
+	<!--Home Page: This represents the home page and contains a description of the app and its purpose.-->
 			<div class="page" id="home">
-				<div id="header" class="w3-container w3-teal">
-					<h1>Home</h1>
+				<div id="header" class="w3-container w3-flat-carrot w3-center">
+					<h1>Austin Macroinvertebrates</h1>
 				</div>
 				
-				<p>This app determines the most likely species of an organism based on answers to a series of taxonomic questions.</p>
+				<div class="w3-container w3-white w3-center">
+					<h2>Insect Key</h2>
+					<p>This app determines the most likely genus of benthic macroinvertebrate found in 
+						<br>Austin, TX based on answers to a series of taxonomic questions.</p>
+				</div>
 
-				<!--The following button takes the user to the start of the process.-->
-				<br>
-				<br>
-				<br>
-				<br>
+				
+				<!--Button: The following button takes the user to the start of the process.-->
+				<center>	
+					<br>
+					<a href="#legsPage" class="button1">
+						<img id="homeBug" src="https://i.imgur.com/KjVFHUa.png" alt="homeBug" class="dynamicimg w3-round" style="width:50%">
+						<br> Begin
+					</a>
+					<br>
 				<center>
-				<a href="#legsPage" class="button1">Begin</a>
-<center>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-				<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative Urban Ecosystems Stream at The University of Texas at 		Austin. Members of the UE Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+				
+				<!--Footer: The following is the footer at the bottom of the page.-->
+					<div class="w3-container w3-white w3-center">
+					<br><br>
+					<p style="font-size:8px;">The following code has been developed by students and/or researchers of the Freshman Research Initiative 
+						Urban Ecosystems Stream at The University of Texas at Austin. Members of the UE Stream, FRI, and The University of Texas 
+						system are not liable for anything related to this code.</p>
+
 			</div>
 		
 			
 			
 			
 			
-		<!--This represents the page which contains the LEGS question.-->
+		<!--Question 1: This represents the page which contains the LEGS question.-->
 			<div class="page" id="legsPage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 1</h1>
 				</div>
 	
 				
-				
     				<div id="content" class="w3-container">
 					<center>
 					<p>Does the organism have legs?</p>
-		
-
 					
-					<a href="#mitePage" onclick=" ;" class="w3-btn w3-black">Yes<br><img id="legsimg" src="https://media.proprofs.com/images/QM/user_images/3073412/6863043831.jpg" alt="organismwithlegs" class="dynamicimg"></a>
+					<a href="#mitePage" onclick=" ;" class="button2">Yes<br>
+						<img id="legsimg" src="https://imgur.com/MM0NWzf.jpg" alt="organismwithlegs" class="dynamicimg"></a>
 						<br>
-					<br><a href="#seedPage" onclick=" ;" class="w3-btn w3-black">No<br><img id="nolegsimg" src="https://media.proprofs.com/images/QM/user_images/3073412/5839716193.jpg" alt="organismwithoutlegs" class="dynamicimg"></a>
+					<a href="#seedPage" onclick=" ;" class="button2">No<br>
+						<img id="nolegsimg" src="https://imgur.com/Pg6zM1z.jpg" alt="organismwithoutlegs" class="dynamicimg"></a>
+						<br>
+						
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -231,10 +237,31 @@ None
 			</div>
 			
 			
-			
+		<!--QUESTION 2: This represents the page which contains the SEED question.-->
+			<div class="page" id="seedPage">
+				<div class="w3-container w3-flat-carrot"> 
+					<h1>Question 2</h1>
+				</div>
+	
+				<div id="content" class="w3-container">
+					<center>
+					<p>Does the organism look like a small, clear seed?</p>
+							
+					<a href="#resultsPage" onclick=" ;" class="button2">Yes<br>
+						<img id="seedshrimpimg" src="https://imgur.com/xAXYzuC.png" alt="seedshrimp" class="dynamicimg"></a>
+						<br>
+					<a href="#shellPage" onclick=" ;" class="button2">No</a>
+						<br>
+						
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+				</div>
+			</div>	
 			
 		
-		<!--This represents the page which contains the MITE question.-->
+		<!--QUESTION 3: This represents the page which contains the MITE question.-->
 			<div class="page" id="mitePage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 3</h1>
@@ -266,51 +293,28 @@ None
 		
 			
 			
+							
 			
-			
-		<!--This represents the page which contains the SEED question.-->
-			<div class="page" id="seedPage">
-				<div class="w3-container w3-flat-carrot">
-					<h1>Question 3</h1>
-				</div>
-	
-				<div id="content" class="w3-container">
-					<center>
-						
-						
-						
-					<a href="# " onclick="         ;" class="w3-btn w3-black">          </a>
-						<br>
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
-						<br>
-					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
-					</center>
-				</div>
-			</div>
-			
-			
-			
-			
-			
-		<!--This represents the page which contains the SHELL question.-->
+		<!--QUESTION 4: This represents the page which contains the SHELL question.-->
 			<div class="page" id="shellPage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 4</h1>
 				</div>
 	
-				
-				
+			
     				<div id="content" class="w3-container">
 					<center>
 					<p>Does the organism have a shell?</p>
-		
 
 					
-					<a href="#shelltypesPage" onclick=" ;" class="w3-btn w3-black">Yes<br><img id="shellimg" src="https://media.proprofs.com/images/QM/user_images/3073412/7337570950.jpg" alt="shell" class="dynamicimg"></a>
+					<a href="#shelltypesPage" onclick=" ;" class="button2">Yes<br> 
+						<img id="shellimg" src="https://imgur.com/8UKnXKp.jpg" alt="shell" class="dynamicimg"></a>
 						<br>
-					<br><a href="#oblongPage" onclick=" ;" class="w3-btn w3-black">No<br><img id="noshellimg" src="https://media.proprofs.com/images/QM/user_images/3073412/7079659724.jpg" alt="noshell" class="dynamicimg"></a>
+					<a href="#oblongPage" onclick=" ;" class="button2">No<br> 	<!-- GoTo QUESTION 8-->
+						<img id="noshellimg" src="https://imgur.com/WqhBCGC.jpg" alt="noshell" class="dynamicimg"></a>
 						<br>
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -321,28 +325,28 @@ None
 			
 			
 			
-		<!--This represents the page which contains the SHELLTYPES question.-->
+		<!--QUESTION 5: This represents the page which contains the SHELLTYPES question.-->
 			<div class="page" id="shelltypesPage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 5</h1>
 				</div>
 	
-				
-				
+			
     				<div id="content" class="w3-container">
 					<center>
 					<p>What is the organism's type of shell?</p>
 		
-
+					<a href="#clamPage" onclick=" ;" class="button2">Bivalve/Clam (two hinged pieces)<br> <!--Go to QUESTION 6-->
+						<img id="bivalveimg" src="https://imgur.com/QhRxXVx.jpg" alt="bivalve" class="dynamicimg"></a>
+						<br>
+					<a href="#resultsPage" onclick=" ;" class="button2">Small Dome (single piece)<br>
+						<img id="smalldomeimg" src="https://imgur.com/zcmbogG.jpg" alt="smalldome" class="dynamicimg"></a>
+						<br>
+					<a href="#snailPage" onclick=" ;" class="button2">Gastropod/Snail (single piece, spiral or swirl)<br> <!--Go to QUESTION 7-->
+						<img id="gastropodimg" src="https://imgur.com/m29Kwn6.jpg" alt="gastropod" class="dynamicimg"></a>
+						<br>
 					
-					<a href="#clamPage" onclick=" ;" class="w3-btn w3-black">Bivalve/Clam (two hinged pieces)<br><img id="bivalveimg" src="https://media.proprofs.com/images/QM/user_images/3073412/1453672738.gif" alt="bivalve" class="dynamicimg"></a>
-						<br>
-				<!--End branch. The organism is an ancylid.-->
-					<br><a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Small Dome (single piece)<br><img id="smalldomeimg" src="https://media.proprofs.com/images/QM/user_images/3073412/3084963327.jpg" alt="smalldome" class="dynamicimg"></a>
-						<br>
-					<br><a href="#snailPage" onclick=" ;" class="w3-btn w3-black">Gastropod/Snail (single piece, spiral or swirl)<br><img id="gastropodimg" src="https://media.proprofs.com/images/QM/user_images/3073412/2341075240.jpg" alt="gastropod" class="dynamicimg"></a>
-						<br>
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -353,27 +357,163 @@ None
 			
 			
 			
-		<!--This represents the page which contains the CLAM question.-->
+		<!--QUESTION 6: This represents the page which contains the CLAM question.-->
 			<div class="page" id="clamPage">
 				<div id="header" class="w3-container w3-flat-carrot">
 					<h1>Question 6</h1>
 				</div>
 	
 				
-				
     				<div id="content" class="w3-container">
 					<center>
 					<p>The organism is a clam. Which of the following best describes it?</p>
 		
-
-				
 				<!--End branch. The organism is an Asian clam.-->
-					<a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Dark yellow to brown or black in color, pronounced ridges along shell<br><img id="darkyellowimg" src="https://media.proprofs.com/images/QM/user_images/3073412/1837665258.jpg" alt="darkyellow" class="dynamicimg"></a>
+					<a href="#resultsPage" onclick=" ;" class="button2">Dark yellow to brown or black in color, pronounced ridges along shell<br>
+						<img id="darkyellowimg" src="https://imgur.com/ptu9UQQ.jpg" alt="darkyellow" class="dynamicimg"></a>
 						<br>
 				<!--End branch. The organism is a fingernail clam.-->
-					<br><a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://media.proprofs.com/images/QM/user_images/3073412/5905870740.jpg" alt="paleyellow" class="dynamicimg"></a>
+					<a href="#resultsPage" onclick=" ;" class="button2">Pale yellow, less defined/smoother ridges (typically smaller than the above, can be semi-transparent)<br><img id="paleyellowimg" src="https://imgur.com/nWIeOG3.jpg" alt="paleyellow" class="dynamicimg"></a>
 						<br>
-					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>
+			
+			
+			
+		<!--QUESTION 7: This represents the page which contains the SNAIL question.-->
+			<div class="page" id="snailPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 7</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>What is the orientation of the snail shell?</p>
+		
+					<a href="#resultsPage" onclick=" ;" class="button2">The opening is to the left of the spiral<br> <!--End of branch. Physidae -->
+						<img id="physidaeimg" src="https://imgur.com/DLUvemN.jpg" alt="physidae" class="dynamicimg"></a>
+						<br>
+					<a href="#resultsPage" onclick=" ;" class="button2">The opening is to the right of the spiral<br> <!--End of branch. Lymnaeidae-->
+						<img id="lymnaeidaeimg" src="https://imgur.com/yluTUFA.jpg" alt="lymnaeidae" class="dynamicimg"></a>
+						<br>
+					<a href="#resultsPage" onclick=" ;" class="button2">The spiral is round and flat. The opening has no leaning<br> <!--End of branch. Planorbidae.-->
+						<img id="planorbidaeimg" src="https://imgur.com/PQgRhmE.jpg" alt="planorbidaeimg" class="dynamicimg"></a>
+						<br>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>	
+			
+		
+		
+					
+		
+		<!--QUESTION 8: This represents the page which contains the FLATWORM question.-->
+			<div class="page" id="oblongPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 8</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>Is your organism oblong and flat with visible eyespots?</p>
+		
+					<a href="#resultsPage" onclick=" ;" class="button2">Yes<br> <!--End of branch. Dugesia -->
+						<img id="dugesiaimg" src="https://imgur.com/dM8dJuX.jpg" alt="dugesia" class="dynamicimg"></a>
+						<br>
+					<a href="#leachPage" onclick=" ;" class="button2">No, my organism does not have these features.</a>
+						<br>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>	
+					
+				
+					
+					
+					
+		<!--QUESTION 9: This represents the page which contains the LEACH question.-->
+			<div class="page" id="leachPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 9</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>Does your organism have a tapered elongate body with a suction cup at either end?</p>
+		
+					<a href="#resultsPage" onclick=" ;" class="button2">Yes, my organism has suction cups<br> <!--End of branch. Hirudinae -->
+						<img id="hirudinaeimg" src="https://imgur.com/sZeoJ0E.jpg" alt="hirudinae" class="dynamicimg"></a>
+						<br>
+					<a href="#wormPage" onclick=" ;" class="button2">No, my organism does not have suction cups.</a>
+						<br>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>	
+					
+					
+					
+		<!--QUESTION 10: This represents the page which contains the WORM question.-->
+			<div class="page" id="wormPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 10</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>Is your organism long and thin with repeating identical segments? Does your organism have no visible eyes and no head capsule? Are there no significant irregularities in width or unusual projections?</p>
+		
+					<a href="#resultsPage" onclick=" ;" class="button2">Yes, this description fits my organism. My organism looks like a roundworm.<br> <!--End of branch. Oligochaeta. -->
+						<img id="oligochaetaimg" src="https://imgur.com/C1SEOcf.jpg" alt="oligochaeta" class="dynamicimg"></a>
+						<br>
+					<a href="#dipteraPage" onclick=" ;" class="button2">No, my organism has some features such as eyes, a head capsule, or protrusions that distinguish one end from the other.</a>
+						<br>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>	
+		
+					
+	<!--This represents the page which contains the INSECT FAMILY question.-->
+			<div class="page" id="insectPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question </h1>
+				</div>
+	
+				
+    				<div id="content" class="w3-container">
+					<center>
+					<p>Your organism is an insect. Now we need to know what family it belongs to. </p>
+	
+					
+					<a href="#dipteraPage" onclick=" ;" class="button2">Order Diptera (fly larvae)<br><img id="dipteraimg" src="https://i.imgur.com/UsxbwOO.jpg" alt="diptera" class="dynamicimg"></a>
+						<br>
+					<a href="#elmidaeAdultsPage" onclick=" ;" class="button2">Order Elmidae (adult beetles)<br><img id="dipteraimg" src="https://i.imgur.com/UsxbwOO.jpg" alt="diptera" class="dynamicimg"></a>
+						<br>
+					
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>	
 						<br>
 					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
 					</center>
@@ -383,7 +523,33 @@ None
 			
 			
 			
-		<!--This represents the final results page, displaying the determined species.-->
+		<!--This represents the page which contains the ORDER: DIPTERA question.-->
+			<div class="page" id="dipteraPage">
+				<div id="header" class="w3-container w3-flat-carrot">
+					<h1>Question 7</h1>
+				</div>
+	
+			
+    				<div id="content" class="w3-container">
+					<center>
+					<p>ORDER: DIPTERA. Which of the following best describes your diptera larva? </p>
+		
+					
+					<a href="#simuliidaePage" onclick=" ;" class="w3-btn w3-black">One small fleshy proleg near the head (A). The back end looks plump and swollen (B). <br>Two large labral fans protrude from the head for collecting food (C).<br><img id="simuliidaeimg" src="https://i.imgur.com/Trq88ps.png" alt="simuliidae" class="dynamicimg"></a>
+						<br>
+					
+				<!--End branch. The organism is a Chironomidae.-->
+					<a href="#resultsPage" onclick=" ;" class="w3-btn w3-black">Two sets of fleshy prolegs: one at the front end (A) and one at the back end (B). <br> The head capsule is round and easily identifiable. The organism often rests in a curved fetal position after being treated with ethanol. <br>They are often very small and appear whitish-yellowish in color.<br><img id="simuliidaeimg" src="https://i.imgur.com/Trq88ps.png" alt="simuliidae" class="dynamicimg"></a>
+						<br>
+					<br><a href="javascript:history.back()" onclick="undo();" class="w3-btn w3-grey w3-round">Go Back</a>
+						<br>
+					<br><a href="#home" onclick="home();" class="w3-btn w3-grey w3-round">Home Page</a>
+					</center>
+    				</div>
+			</div>
+		
+	
+	<!--This represents the final results page, displaying the determined species.-->
 			<div class="page" id="resultsPage">
 				<div class="w3-container w3-flat-carrot">
 					<h1>Results</h1>
